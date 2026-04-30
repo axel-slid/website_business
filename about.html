@@ -295,10 +295,26 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      nav { padding: 18px 5vw; }
-      .about-hero { padding: 100px 5vw 60px; }
+      nav {
+        display: flex; flex-direction: column; justify-content: center;
+        gap: 10px; padding: 14px 5vw;
+      }
+      .logo { flex-direction: column; gap: 4px; text-align: center; }
+      .brand-mark { height: 34px; max-width: 82px; }
+      .brand-text { font-size: 1.18rem; line-height: 1; }
+      .nav-contact {
+        justify-content: center; gap: 8px 12px; max-width: 100%;
+        text-align: center;
+      }
+      .nav-contact a { font-size: .78rem; }
+      .nav-contact svg { width: 13px; height: 13px; }
+      .about-hero { padding: 185px 5vw 60px; }
       #team, #story, #values, #cta { padding-left: 5vw; padding-right: 5vw; }
       footer { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .nav-contact { flex-direction: column; gap: 4px; }
+      .about-hero { padding-top: 215px; }
     }
   </style>
 </head>
