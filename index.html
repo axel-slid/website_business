@@ -117,7 +117,7 @@
       display: flex; flex-direction: column;
       justify-content: center; align-items: center;
       text-align: center;
-      padding: 120px 6vw 80px;
+      padding: 120px 6vw 150px;
       position: relative; overflow: hidden;
     }
     .hero-glow {
@@ -182,7 +182,7 @@
     .hero-by strong { color: rgba(255,255,255,.55); }
 
     .scroll-line {
-      position: absolute; bottom: 34px; left: 50%;
+      position: absolute; bottom: 100px; left: 50%;
       transform: translateX(-50%);
       width: 1px; height: 52px;
       background: linear-gradient(to bottom, rgba(255,255,255,.35), transparent);
@@ -202,6 +202,9 @@
       border-bottom: 1px solid rgba(255,255,255,.1);
       background: rgba(201,97,58,.07);
       padding: 22px 0;
+    }
+    .hero .marquee-wrap {
+      position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
     }
     .marquee-row {
       display: flex; width: max-content;
@@ -608,12 +611,10 @@
     <p class="hero-by">By <strong>Reid &amp; Alex</strong></p>
   </div>
   <div class="scroll-line"></div>
+  <div class="marquee-wrap">
+    <div class="marquee-row" id="mq"></div>
+  </div>
 </section>
-
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-row" id="mq"></div>
-</div>
 
 <!-- STYLE SHOWCASE -->
 <section id="showcase">
