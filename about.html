@@ -152,7 +152,10 @@
     .photo-placeholder svg { color: rgba(255,255,255,.15); }
     .photo-placeholder span { font-size: .75rem; }
 
-    .person-info { display: flex; flex-direction: column; gap: 10px; }
+    .person-info {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 10px; text-align: center;
+    }
     .person-name {
       font-family: 'Fraunces', serif; font-size: 1.8rem;
       font-weight: 700; letter-spacing: -.02em; font-optical-sizing: auto;
@@ -165,7 +168,8 @@
       color: rgba(255,255,255,.58); font-size: .95rem; line-height: 1.75;
     }
     .person-tags {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 8px; margin-top: 4px;
     }
     .tag {
       background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
@@ -219,7 +223,7 @@
     }
     .value-num {
       font-family: 'Fraunces', serif; font-size: 1rem;
-      font-weight: 700; color: var(--terra); font-optical-sizing: auto;
+      font-weight: 700; color: #FF8A3D; font-optical-sizing: auto;
     }
     .value-card h3 {
       font-family: 'Fraunces', serif; font-size: 1.15rem;
@@ -343,10 +347,7 @@
         <div class="person-role">Co-Founder</div>
         <div class="person-name">Alex</div>
         <p class="person-bio">
-          Alex handles the build. He takes Reid's designs and turns them into fast, search-optimized, actually-working websites. Obsessed with clean code, performance, and making sure nothing breaks after launch day.
-        </p>
-        <p class="person-bio">
-          Outside of work he's into long runs, building side projects, and convincing people that SEO actually matters.
+          Hello, my name's Alex! I'm studying Computer Science and am an active member of Machine Learning at Berkeley. I have over 3 years of research experience at Stanford, where I leveraged deep learning techniques to improve medical AI. Now, I'm focused on using the cutting-edge techniques I learned in research to build and deploy full-scale AI applications.
         </p>
         <div class="person-tags">
           <span class="tag">Development</span>
@@ -417,7 +418,7 @@
     data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>
     Schedule a call &rarr;
   </button>
-  <p class="advance reveal d4">Please schedule at least 24 hours in advance.</p>
+  <p class="advance reveal d4">Please schedule at least 1 day in advance.</p>
 </section>
 
 <!-- FOOTER -->
