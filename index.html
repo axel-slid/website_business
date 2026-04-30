@@ -74,6 +74,11 @@
       transition: color .2s;
     }
     .nav-links a:hover { color: var(--white); }
+    .nav-phone {
+      color: rgba(255,255,255,.55); text-decoration: none;
+      font-size: .9rem; font-weight: 600; transition: color .2s;
+    }
+    .nav-phone:hover { color: var(--white); }
 
     /* ─── BUTTONS ─── */
     .btn {
@@ -326,10 +331,12 @@
     /* 2 - Coffee */
     .c2 { background:#F5EFE6; }
     .c2 .bg {
-      background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format') center/cover;
-      opacity: .18;
+      background:
+        linear-gradient(rgba(70,42,18,.36),rgba(245,239,230,.48)),
+        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format') center/cover;
+      opacity: .82;
     }
-    .c2 .ov { background:linear-gradient(to top, rgba(245,239,230,.99) 0%, rgba(245,239,230,.6) 45%, rgba(245,239,230,.1) 100%); }
+    .c2 .ov { background:linear-gradient(to top, rgba(245,239,230,.96) 0%, rgba(245,239,230,.48) 45%, rgba(61,32,8,.18) 100%); }
     .c2 .ml { font-family:'Fraunces',serif; color:#3d2008; font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; }
     .c2 .mr { color:rgba(61,32,8,.45); }
     .c2 .ctag { background:rgba(61,32,8,.07); color:#3d2008; }
@@ -358,11 +365,11 @@
     .c4 { background:#FAFAFA; }
     .c4 .bg {
       background:
-        linear-gradient(rgba(250,250,250,.72),rgba(250,250,250,.9)),
+        linear-gradient(rgba(20,18,16,.18),rgba(250,250,250,.48)),
         url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80&auto=format') center/cover;
-      opacity: .9;
+      opacity: .96;
     }
-    .c4 .ov { background:linear-gradient(to top,rgba(250,250,250,1) 0%,rgba(250,250,250,.64) 50%,rgba(250,250,250,.16)); }
+    .c4 .ov { background:linear-gradient(to top,rgba(250,250,250,.94) 0%,rgba(250,250,250,.42) 50%,rgba(10,10,10,.12)); }
     .c4 .ml { color:#0a0a0a; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; font-weight:400; }
     .c4 .mr { color:rgba(10,10,10,.35); font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; }
     .c4 .ctag { background:transparent; color:rgba(10,10,10,.4); border:1px solid rgba(10,10,10,.14); }
@@ -461,7 +468,7 @@
     .price-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 18px; max-width: 800px;
+      gap: 18px; max-width: 440px;
     }
     .pcard {
       background: var(--white); border-radius: var(--r-lg);
@@ -570,6 +577,11 @@
       font-size: .8rem; transition: color .2s;
     }
     .footer-links a:hover { color: var(--white); }
+    .footer-phone {
+      color: rgba(255,255,255,.38); text-decoration: none;
+      font-size: .8rem; font-weight: 600; transition: color .2s;
+    }
+    .footer-phone:hover { color: var(--white); }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
@@ -609,6 +621,7 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
+  <a class="nav-phone" href="tel:6502266484">(650) 226-6484</a>
   <button class="btn" data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>
     Book a free call
   </button>
@@ -828,7 +841,7 @@
       <div class="ptag">Starter</div>
       <h3>Get your site live</h3>
       <div>
-        <div class="price-big"><sup>$</sup>500</div>
+        <div class="price-big"><sup>$</sup>499</div>
         <p class="price-note">One-time to go live<br>Domain fee paid separately</p>
       </div>
       <ul class="feats">
@@ -837,25 +850,10 @@
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>SEO basics included</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Live review call before launch</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>$50 per revision after launch</li>
+        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Optional $19.99/mo maintenance after launch</li>
       </ul>
       <button class="btn" style="background:transparent;border:2px solid var(--terra);color:var(--terra);"
         data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>Get started</button>
-    </div>
-    <div class="pcard feat reveal d2">
-      <div class="ptag">Subscription</div>
-      <h3>Want us to handle updates?</h3>
-      <div>
-        <div class="price-big"><sup>$</sup>19.99<span style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0;">/mo</span></div>
-        <p class="price-note">Paid monthly after your site goes live</p>
-      </div>
-      <ul class="feats">
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>$19.99/mo starts after launch</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Basic upkeep and small text updates</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Maintenance calls scheduled 1 day ahead</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Larger revisions are still $50 each</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No long-term contract</li>
-      </ul>
-      <button class="btn" data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>Book a free call</button>
     </div>
   </div>
 </section>
@@ -886,7 +884,7 @@
         What if I need changes after launch?
         <div class="fi-ico"><svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
       </button>
-      <div class="fa">There is not an included one-time revision, but we review the site with you on the call and make sure you are happy before it goes live. After launch, revisions are $50 each, or you can choose the $19.99/mo subscription for simple ongoing support.</div>
+      <div class="fa">There is not an included one-time revision, but we review the site with you on the call and make sure you are happy before it goes live. After launch, revisions are $50 each, or you can add $19.99/mo maintenance for simple ongoing support.</div>
     </div>
     <div class="fi reveal d4">
       <button class="fq" onclick="faq(this)">
@@ -904,6 +902,7 @@
   <div class="section-label reveal">Free 30-minute call</div>
   <h2 class="section-heading reveal d1">New client or need <em>maintenance?</em></h2>
   <p class="reveal d2">No pressure, no pitch — just a conversation about what you need.</p>
+  <a class="footer-phone reveal d2" href="tel:6502266484">(650) 226-6484</a>
   <button class="btn reveal d3" style="font-size:1rem;padding:16px 42px;"
     data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>
     Schedule a call &rarr;
@@ -918,6 +917,7 @@
     <a href="terms.html">Terms</a>
     <a href="privacy.html">Privacy</a>
   </div>
+  <a class="footer-phone" href="tel:6502266484">(650) 226-6484</a>
   <p>&copy; 2026 SiteRocket &middot; Reid &amp; Alex</p>
 </footer>
 
