@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SiteRocket — Websites for Small Businesses</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="download.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -62,11 +62,15 @@
       border-bottom: 1px solid rgba(255,255,255,.06);
     }
     .logo {
-      font-family: 'Fraunces', serif;
-      font-size: 1.35rem; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 10px;
       color: var(--white); text-decoration: none;
     }
-    .logo span { color: var(--terra); }
+    .brand-mark { width: 42px; height: 42px; object-fit: contain; display: block; }
+    .brand-text {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem; font-weight: 700;
+    }
+    .brand-text span { color: var(--terra); }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,.55); text-decoration: none;
@@ -74,11 +78,15 @@
       transition: color .2s;
     }
     .nav-links a:hover { color: var(--white); }
-    .nav-phone {
+    .nav-contact {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-contact a {
       color: rgba(255,255,255,.55); text-decoration: none;
       font-size: .9rem; font-weight: 600; transition: color .2s;
     }
-    .nav-phone:hover { color: var(--white); }
+    .nav-contact a:hover { color: var(--white); }
 
     /* ─── BUTTONS ─── */
     .btn {
@@ -566,10 +574,11 @@
       gap: 14px; flex-wrap: wrap;
     }
     .flogo {
-      font-family: 'Fraunces', serif; font-size: 1.15rem;
-      font-weight: 700; color: var(--white);
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--white); text-decoration: none;
     }
-    .flogo span { color: var(--terra); }
+    .flogo .brand-mark { width: 36px; height: 36px; }
+    .flogo .brand-text { font-size: 1.15rem; }
     footer p { font-size: .8rem; color: rgba(255,255,255,.28); }
     .footer-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
     .footer-links a {
@@ -613,7 +622,10 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="logo">Site<span>Rocket</span></a>
+  <a href="#" class="logo">
+    <img class="brand-mark" src="download.png" alt="" />
+    <span class="brand-text">Site<span>Rocket</span></span>
+  </a>
   <ul class="nav-links">
     <li><a href="#showcase">Work</a></li>
     <li><a href="#services">Services</a></li>
@@ -621,10 +633,11 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
-  <a class="nav-phone" href="tel:6502266484">(650) 226-6484</a>
-  <button class="btn" data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>
-    Book a free call
-  </button>
+  <div class="nav-contact">
+    <a href="https://www.instagram.com/siterocket.io" target="_blank" rel="noopener">siterocket.io</a>
+    <a href="mailto:support@siterocket.io">support@siterocket.io</a>
+    <a href="tel:6502266484">650-226-6484</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -912,7 +925,10 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="flogo">Site<span>Rocket</span></div>
+  <a href="#" class="flogo">
+    <img class="brand-mark" src="download.png" alt="" />
+    <span class="brand-text">Site<span>Rocket</span></span>
+  </a>
   <div class="footer-links">
     <a href="terms.html">Terms</a>
     <a href="privacy.html">Privacy</a>

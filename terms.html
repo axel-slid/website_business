@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service | SiteRocket</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="download.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -26,10 +26,14 @@
     nav { border-bottom: 1px solid rgba(255,255,255,.07); }
     footer { border-top: 1px solid rgba(255,255,255,.07); }
     .logo, .flogo {
-      font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 10px;
       color: var(--white); text-decoration: none;
     }
-    .logo span, .flogo span { color: var(--terra); }
+    .brand-mark { width: 40px; height: 40px; object-fit: contain; display: block; }
+    .brand-text {
+      font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 700;
+    }
+    .brand-text span { color: var(--terra); }
     .nav-links, .footer-links { display: flex; gap: 18px; flex-wrap: wrap; list-style: none; }
     a { color: var(--terra-lt); }
     .nav-links a, .footer-links a {
@@ -66,7 +70,10 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo">Site<span>Rocket</span></a>
+    <a href="index.html" class="logo">
+      <img class="brand-mark" src="download.png" alt="" />
+      <span class="brand-text">Site<span>Rocket</span></span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html#pricing">Pricing</a></li>
       <li><a href="index.html#faq">FAQ</a></li>
@@ -135,12 +142,15 @@
       <p>We may update these Terms from time to time. The updated version will be posted on this page with a new effective date. Continued use of our website or services after changes are posted means you accept the updated Terms.</p>
 
       <h2>17. Contact</h2>
-      <p>Questions about these Terms can be raised through the booking or contact options available on our website, or by phone at (650) 226-6484.</p>
+      <p>Questions about these Terms can be raised through the booking or contact options available on our website, by email at support@siterocket.io, or by phone at 650-226-6484.</p>
     </article>
   </main>
 
   <footer>
-    <div class="flogo">Site<span>Rocket</span></div>
+    <a href="index.html" class="flogo">
+      <img class="brand-mark" src="download.png" alt="" />
+      <span class="brand-text">Site<span>Rocket</span></span>
+    </a>
     <div class="footer-links">
       <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
