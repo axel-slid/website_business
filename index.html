@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SiteRocket — Websites for Small Businesses</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -45,25 +46,6 @@
       background: var(--terra);
       z-index: 300;
       transition: width 0.08s linear;
-    }
-
-    /* ─── CURSOR ─── */
-    #cur, #cur-ring {
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: 400;
-    }
-    #cur {
-      width: 8px; height: 8px;
-      background: var(--terra);
-      transition: width .3s var(--spring), height .3s var(--spring);
-    }
-    #cur-ring {
-      width: 38px; height: 38px;
-      border: 1.5px solid rgba(201,97,58,.45);
-      transition: width .3s var(--spring), height .3s var(--spring), border-color .2s;
     }
 
     /* ─── NAV ─── */
@@ -216,24 +198,24 @@
     /* ─── MARQUEE ─── */
     .marquee-wrap {
       overflow: hidden;
-      border-top: 1px solid rgba(255,255,255,.055);
-      border-bottom: 1px solid rgba(255,255,255,.055);
-      background: rgba(255,255,255,.02);
-      padding: 16px 0;
+      border-top: 1px solid rgba(255,255,255,.1);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: rgba(201,97,58,.07);
+      padding: 22px 0;
     }
     .marquee-row {
       display: flex; width: max-content;
-      animation: mq 26s linear infinite;
+      animation: mq 22s linear infinite;
     }
     .mq-item {
-      display: flex; align-items: center; gap: 18px;
-      padding: 0 22px;
-      font-size: .78rem; font-weight: 500;
-      color: rgba(255,255,255,.38);
-      letter-spacing: .08em; text-transform: uppercase;
+      display: flex; align-items: center; gap: 22px;
+      padding: 0 28px;
+      font-size: 1rem; font-weight: 700;
+      color: rgba(255,255,255,.85);
+      letter-spacing: .1em; text-transform: uppercase;
       white-space: nowrap;
     }
-    .mq-item::after { content: '·'; color: var(--terra); font-size: .6rem; }
+    .mq-item::after { content: '●'; color: var(--terra); font-size: .45rem; line-height: 1; }
     @keyframes mq { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
     /* ─── SHOWCASE ─── */
@@ -433,16 +415,16 @@
     }
     .step { display: flex; flex-direction: column; gap: 14px; }
     .step-n {
-      font-family: 'Fraunces', serif; font-size: 3.6rem;
-      font-weight: 800; color: rgba(255,255,255,.05);
+      font-family: 'Fraunces', serif; font-size: 4rem;
+      font-weight: 800; color: rgba(201,97,58,.35);
       line-height: 1; letter-spacing: -.04em;
     }
     .step-bar { width: 28px; height: 2px; background: var(--terra); border-radius: 1px; }
     .step h3 {
-      font-family: 'Fraunces', serif; font-size: 1.1rem;
-      font-weight: 700; font-optical-sizing: auto;
+      font-family: 'Fraunces', serif; font-size: 1.15rem;
+      font-weight: 700; font-optical-sizing: auto; color: var(--white);
     }
-    .step p { color: rgba(255,255,255,.45); font-size: .9rem; line-height: 1.72; }
+    .step p { color: rgba(255,255,255,.65); font-size: .93rem; line-height: 1.72; }
 
     /* ─── PRICING ─── */
     #pricing { padding: 100px 6vw; }
@@ -565,7 +547,6 @@
       .cards-track { padding-left: 5vw; padding-right: 5vw; }
       .steps { grid-template-columns: 1fr 1fr; }
       footer { flex-direction: column; text-align: center; }
-      #cur, #cur-ring { display: none; }
     }
     @media (max-width: 480px) {
       h1 { font-size: clamp(2.6rem, 11vw, 3.5rem); }
@@ -577,8 +558,6 @@
 <body>
 
 <div id="bar"></div>
-<div id="cur"></div>
-<div id="cur-ring"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -588,6 +567,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="about.html">About</a></li>
   </ul>
   <button class="btn" data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>
     Book a free call
@@ -910,31 +890,6 @@ Cal("ui",{theme:"dark",hideEventTypeDetails:false,layout:"month_view"});
 <script>
   // Progress bar
   const bar = document.getElementById('bar');
-  // Cursor
-  const cur = document.getElementById('cur');
-  const ring = document.getElementById('cur-ring');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove', e => {
-    mx=e.clientX; my=e.clientY;
-    cur.style.left=mx+'px'; cur.style.top=my+'px';
-  });
-  (function loop(){
-    rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
-    ring.style.left=rx+'px'; ring.style.top=ry+'px';
-    requestAnimationFrame(loop);
-  })();
-  document.querySelectorAll('button,a,.scard').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{
-      cur.style.width='14px';cur.style.height='14px';
-      ring.style.width='54px';ring.style.height='54px';
-      ring.style.borderColor='rgba(201,97,58,.8)';
-    });
-    el.addEventListener('mouseleave',()=>{
-      cur.style.width='8px';cur.style.height='8px';
-      ring.style.width='38px';ring.style.height='38px';
-      ring.style.borderColor='rgba(201,97,58,.45)';
-    });
-  });
 
   // Scroll
   const nav = document.getElementById('nav');

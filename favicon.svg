@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Partial orbit arc -->
+  <path d="M 10 54 A 44 44 0 0 1 54 10" fill="none" stroke="#C9613A" stroke-width="4" stroke-linecap="round"/>
+  <!-- Speed lines (lower-left exhaust area) -->
+  <line x1="4" y1="44" x2="16" y2="37" stroke="#C9613A" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="3" y1="53" x2="13" y2="47" stroke="#C9613A" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="10" y1="60" x2="20" y2="54" stroke="#C9613A" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Rocket body (pointing upper-right, rotated 45° CW from upright) -->
+  <g transform="translate(32,32) rotate(45) translate(-32,-32)">
+    <!-- Body capsule -->
+    <rect x="24" y="16" width="16" height="26" rx="8" fill="#C9613A"/>
+    <!-- Window -->
+    <circle cx="32" cy="27" r="5" fill="white"/>
+    <!-- Left fin -->
+    <polygon points="24,36 15,48 24,43" fill="#C9613A"/>
+    <!-- Right fin -->
+    <polygon points="40,36 49,48 40,43" fill="#C9613A"/>
+    <!-- Flame -->
+    <ellipse cx="32" cy="46" rx="5" ry="4" fill="#C9613A" opacity="0.6"/>
+  </g>
+</svg>
