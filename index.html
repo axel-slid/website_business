@@ -51,7 +51,8 @@
     /* ─── NAV ─── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
+      display: grid; grid-template-columns: minmax(170px, 1fr) auto minmax(170px, 1fr);
+      align-items: center; gap: 18px;
       padding: 20px 6vw;
       transition: background .35s, border-color .35s;
     }
@@ -71,7 +72,7 @@
       font-size: 1.35rem; font-weight: 700;
     }
     .brand-text span { color: var(--terra); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; justify-content: center; }
     .nav-links a {
       color: rgba(255,255,255,.55); text-decoration: none;
       font-size: .9rem; font-weight: 500;
@@ -860,15 +861,15 @@
       <h3>Get your site live</h3>
       <div>
         <div class="price-big"><sup>$</sup>499</div>
-        <p class="price-note">One-time to go live<br>Domain fee paid separately</p>
+        <p class="price-note">To go live<br>Then $19.99/mo maintenance</p>
       </div>
       <ul class="feats">
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Custom designed for your brand</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mobile-friendly &amp; fast</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>SEO basics included</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Live review call before launch</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>$50 per revision after launch</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Optional $19.99/mo maintenance after launch</li>
+        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Automatically enrolled in $19.99/mo maintenance after launch</li>
+        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Simple ongoing support and small updates included</li>
       </ul>
       <button class="btn" style="background:transparent;border:2px solid var(--terra);color:var(--terra);"
         data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>Get started</button>
@@ -902,7 +903,7 @@
         What if I need changes after launch?
         <div class="fi-ico"><svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
       </button>
-      <div class="fa">Before launch, we review the site with you live and make sure you're happy with it. After launch, individual revisions are $50 each, or you can add simple ongoing maintenance for $19.99/mo.</div>
+      <div class="fa">Before launch, we review the site with you live and make sure you're happy with it. After launch, you're automatically enrolled in $19.99/mo maintenance for simple ongoing support and small updates.</div>
     </div>
     <div class="fi reveal d4">
       <button class="fq" onclick="faq(this)">

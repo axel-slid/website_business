@@ -42,7 +42,8 @@
     /* ─── NAV ─── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
+      display: grid; grid-template-columns: minmax(170px, 1fr) auto minmax(170px, 1fr);
+      align-items: center; gap: 18px;
       padding: 20px 6vw;
       transition: background .35s, border-color .35s;
     }
@@ -60,7 +61,7 @@
       font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 700;
     }
     .brand-text span { color: var(--terra); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; justify-content: center; }
     .nav-links a {
       color: rgba(255,255,255,.55); text-decoration: none;
       font-size: .9rem; font-weight: 500; transition: color .2s;
