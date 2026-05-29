@@ -489,7 +489,7 @@
     .price-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 18px; max-width: 440px;
+      gap: 18px; max-width: 520px;
     }
     .pcard {
       background: var(--white); border-radius: var(--r-lg);
@@ -530,6 +530,16 @@
     }
     .feat .ck { background: rgba(255,255,255,.1); color: var(--white); }
     .pcard .btn { width: 100%; justify-content: center; padding: 13px; }
+    .price-actions { display: grid; gap: 10px; }
+    .price-actions .btn.secondary {
+      background: transparent;
+      border: 2px solid var(--terra);
+      color: var(--terra);
+    }
+    .price-actions .btn.secondary:hover {
+      background: var(--terra-pale);
+      box-shadow: none;
+    }
 
     /* ─── FAQ ─── */
     #faq { padding: 100px 6vw; }
@@ -885,19 +895,21 @@
       <div class="ptag">Starter</div>
       <h3>Get your site live</h3>
       <div>
-        <div class="price-big"><sup>$</sup>100</div>
-        <p class="price-note">Per month for 6 months<br>Then $30/year for domain</p>
+        <div class="price-big"><sup>$</sup>300</div>
+        <p class="price-note">Upfront build and launch<br>Then $9.99/month maintenance<br>$19.99/year for domain service</p>
       </div>
       <ul class="feats">
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Custom designed for your brand</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mobile-friendly &amp; fast</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>SEO basics included</li>
         <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Live review call before launch</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Six monthly payments, then just $30/year for domain renewal</li>
-        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Domain setup and renewal handled for $30/year after the 6 monthly payments</li>
+        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>$9.99/month maintenance after launch, text us whenever</li>
+        <li><span class="ck"><svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Domain setup and renewal handled for $19.99/year</li>
       </ul>
-      <button class="btn" style="background:transparent;border:2px solid var(--terra);color:var(--terra);"
-        data-cal-link="infrastruct-alex/30min" data-cal-config='{"layout":"month_view"}'>Get started</button>
+      <div class="price-actions">
+        <a class="btn" href="https://buy.stripe.com/8x2fZj5B0fio8RP0OXfYY0A" target="_blank" rel="noopener">Start website plan</a>
+        <a class="btn secondary" href="https://buy.stripe.com/5kQ8wRaVk8U00lj55dfYY0B" target="_blank" rel="noopener">Add domain plan</a>
+      </div>
     </div>
   </div>
 </section>
@@ -928,7 +940,7 @@
         What if I need changes after launch?
         <div class="fi-ico"><svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
       </button>
-      <div class="fa">Before launch, we review the site with you live and make sure you're happy with it. The starter plan is $100/month for 6 months, then $30/year for domain renewal.</div>
+      <div class="fa">Before launch, we review the site with you live and make sure you're happy with it. The starter plan is $300 upfront, then $9.99/month for maintenance. Domain service is $19.99/year.</div>
     </div>
     <div class="fi reveal d4">
       <button class="fq" onclick="faq(this)">
